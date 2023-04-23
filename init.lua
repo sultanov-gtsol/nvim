@@ -4,5 +4,5 @@ require("sultanov.core.keymaps")
 require("sultanov.core.colorscheme")
 require("sultanov.plugins.comment")
 require("sultanov.plugins.nvim-tree")
-
+require("sultanov.plugins.lualine")
 

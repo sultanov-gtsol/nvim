@@ -38,6 +38,11 @@ return packer.startup(function(use)
     use("numToStr/Comment.nvim")
     -- file explorer plugin
     use("nvim-tree/nvim-tree.lua")
+    -- explorer icons
+    use("kyazdani42/nvim-web-devicons")
+    -- statusline
+    use("nvim-lualine/lualine.nvim")
+
     if packer_bootstrap then
         require("packer").sync()
     end
