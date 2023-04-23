@@ -42,8 +42,22 @@ return packer.startup(function(use)
     use("kyazdani42/nvim-web-devicons")
     -- statusline
     use("nvim-lualine/lualine.nvim")
+    -- telescope
+    use({'nvim-telescope/telescope.nvim', tag = '0.1.1',})
 
-    if packer_bootstrap then
+    -- autocomplete
+    use("hrsh7th/nvim-cmp")
+    use("hrsh7th/cmp-buffer")
+    use("hrsh7th/cmp-path")
+-- snippets
+  use("L3MON4D3/LuaSnip") -- snippet engine
+  use("saadparwaiz1/cmp_luasnip") -- for autocompletion
+  use("rafamadriz/friendly-snippets") -- useful snippets
+   use {
+    "williamboman/mason.nvim",
+    run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+}
+  if packer_bootstrap then
         require("packer").sync()
     end
 end)

@@ -24,3 +24,8 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+
+-- telescope
+local builtin = require('telescope.builtin')
+keymap.set("n", "<leader>ff", builtin.find_files,{}) -- find file within the project
+keymap.set("n", "<leader>fs", builtin.live_grep,{}) -- find string within the project
