@@ -24,11 +24,20 @@ if not status then
 end
 
 return packer.startup(function(use)
+    -- packer plugin alway on first place
     use("wbthomason/packer.nvim")
-
+    -- naccessary lua functions for plugins
+    use("nvim-lua/plenary.nvim")
+    -- tmux pluging to navigate between split windows woth ctrl+hjkl
+    use("christoomey/vim-tmux-navigator")
+    -- toggle maximizer split window
+    use("szw/vim-maximizer")
+    -- color scheme theme
     use{"bluz71/vim-nightfly-colors", as = "nightfly"} -- color scheme
-
-
+    -- comment plugin g+c+c = toggle one line comment. g+c+12+j = toggle comment for 12 lines below
+    use("numToStr/Comment.nvim")
+    -- file explorer plugin
+    use("nvim-tree/nvim-tree.lua")
     if packer_bootstrap then
         require("packer").sync()
     end
